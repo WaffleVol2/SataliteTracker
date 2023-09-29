@@ -133,7 +133,7 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>1</Capability>
+            <Capability>0</Capability>
             <DriverSelection>-1</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
@@ -518,6 +518,11 @@
               <FileName>DriveMotor.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\DriveMotor.h</FilePath>
+            </File>
+            <File>
+              <FileName>LimitSwitchesButton.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LimitSwitchesButton.c</FilePath>
             </File>
           </Files>
         </Group>
