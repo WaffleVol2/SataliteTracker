@@ -1,0 +1,431 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Blaise Swan, Conestoga College , LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Keil\Projects\software Lab 3\Demo.uvprojx
+Project File Date:  04/05/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f303xe.s...
+SysClock.c(1): warning: In file included from...
+./SysClock.h(13): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+SysClock.c(20): warning: // comments are not allowed in this language [-Wcomment]
+        // To correctly read data from FLASH memory, the number of wait states (LATENCY)
+        ^
+2 warnings generated.
+compiling SysClock.c...
+LED.c(6): warning: In file included from...
+./LED.h(1): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+LED.c(8): warning: // comments are not allowed in this language [-Wcomment]
+        //initialize
+        ^
+2 warnings generated.
+compiling LED.c...
+system_stm32f3xx.c(86): warning: In file included from...
+C:/Users/Blais/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f3xx.h(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/Blais/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f3xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+system_stm32f3xx.c(86): warning: In file included from...
+C:/Users/Blais/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include\stm32f3xx.h(138): warning: In file included from...
+C:/Users/Blais/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+3 warnings generated.
+compiling system_stm32f3xx.c...
+RCServoSkeleton.c(1): warning: // comments are not allowed in this language [-Wcomment]
+// RC Servo Skeleton
+^
+RCServoSkeleton.c(2): warning: In file included from...
+./UART.h(4): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+RCServoSkeleton.c(4): warning: In file included from...
+./RCServo.h(8): warning: no newline at end of file [-Wnewline-eof]
+#endif 
+       ^
+RCServoSkeleton.c(39): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint32_t psc = (SystemCoreClock / 1000000) -1;
+                 ^
+RCServoSkeleton.c(90): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        uint16_t targetPW = MIN_PULSE_WIDTH + ((MAX_PULSE_WIDTH - MIN_PULSE_WIDTH) / (MAX_ANGLE - MIN_ANGLE)) * (angle + MIN_ANGLE);
+                                                                                                              ~  ~~~~~~^~~~~~~~~~~
+RCServoSkeleton.c(107): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+6 warnings generated.
+compiling RCServoSkeleton.c...
+UART.c(1): warning: // comments are not allowed in this language [-Wcomment]
+//UART Init 
+^
+UART.c(4): warning: In file included from...
+./UART.h(4): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+UART.c(141): warning: implicitly declaring library function 'vsnprintf' with type 'int (char *, unsigned int, const char *, __builtin_va_list)' [-Wimplicit-function-declaration]
+        vsnprintf(buffer, MAX_BUF_SIZE, format, args);
+        ^
+UART.c(141): note: include the header <stdio.h> or explicitly provide a declaration for 'vsnprintf'
+UART.c(141): warning: format string is not a string literal [-Wformat-nonliteral]
+        vsnprintf(buffer, MAX_BUF_SIZE, format, args);
+                                        ^~~~~~
+UART.c(148): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+                return(USART2->RDR);
+                ~~~~~~ ~~~~~~~~^~~
+5 warnings generated.
+compiling UART.c...
+main.c(1): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+main.c(3): warning: In file included from...
+./LCD.h(1): warning: // comments are not allowed in this language [-Wcomment]
+//LCD HEADER
+^
+main.c(3): warning: In file included from...
+./LCD.h(6): warning: In file included from...
+./utility.h(4): warning: // comments are not allowed in this language [-Wcomment]
+//////////////////////////////////
+^
+./utility.h(78): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(3): warning: In file included from...
+./LCD.h(85): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(8): warning: In file included from...
+./RCServo.h(8): warning: no newline at end of file [-Wnewline-eof]
+#endif 
+       ^
+main.c(9): warning: In file included from...
+./ultraSonicInit.h(3): warning: // comments are not allowed in this language [-Wcomment]
+//Blaise Swan
+^
+./ultraSonicInit.h(13): warning: no newline at end of file [-Wnewline-eof]
+int ON_DEMAND_TRIGGER(void);
+                            ^
+main.c(10): warning: In file included from...
+./DriveMotor.h(1): warning: // comments are not allowed in this language [-Wcomment]
+// Drive Motor Module Header File
+^
+main.c(17): warning: // comments are not allowed in this language [-Wcomment]
+        //LED_INIT();
+        ^
+main.c(26): warning: multi-character character constant [-Wmultichar]
+        char input = 'ZZZ';
+                     ^
+main.c(22): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        int8_t stepType;
+               ^
+main.c(23): warning: unused variable 'holderLab3' [-Wunused-variable]
+        char holderLab3;
+             ^
+main.c(27): warning: unused variable 'inputCommand' [-Wunused-variable]
+        char inputCommand = '\0';
+             ^
+main.c(24): warning: unused variable 'defaultAngle' [-Wunused-variable]
+        int16_t defaultAngle = 90;
+                ^
+main.c(26): warning: implicit conversion from 'int' to 'char' changes value from 5921370 to 90 [-Wconstant-conversion]
+        char input = 'ZZZ';
+             ~~~~~   ^~~~~
+main.c(175): warning: variable 'stepType' may be uninitialized when used here [-Wconditional-uninitialized]
+                Stepper_Step(stepType);
+                             ^~~~~~~~
+main.c(22): note: initialize the variable 'stepType' to silence this warning
+        int8_t stepType;
+                       ^
+                        = '\0'
+17 warnings generated.
+compiling main.c...
+stepper.c(1): warning: In file included from...
+./Stepper.h(4): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+stepper.c(7): warning: no previous extern declaration for non-static variable 'stepPatternTable' [-Wmissing-variable-declarations]
+const uint16_t stepPatternTable[8] = 
+               ^
+stepper.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const uint16_t stepPatternTable[8] = 
+      ^
+stepper.c(26): warning: // comments are not allowed in this language [-Wcomment]
+        GPIOC -> PUPDR &= ~(0x3UL << (2*0)); //no pull
+                                             ^
+3 warnings generated.
+compiling stepper.c...
+utility.c(1): warning: In file included from...
+./utility.h(4): warning: // comments are not allowed in this language [-Wcomment]
+//////////////////////////////////
+^
+utility.c(1): warning: In file included from...
+./utility.h(8): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+utility.c(1): warning: In file included from...
+./utility.h(78): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+3 warnings generated.
+compiling utility.c...
+MainAlt.c(1): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+^
+1 warning generated.
+compiling MainAlt.c...
+PushButton.c(3): warning: // comments are not allowed in this language [-Wcomment]
+//void PushButton_Init(void){
+^
+PushButton.c(28): warning: no newline at end of file [-Wnewline-eof]
+        
+        ^
+PushButton.c(28): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+3 warnings generated.
+compiling PushButton.c...
+ultraSonicInit.c(1): warning: // comments are not allowed in this language [-Wcomment]
+//Blaise Swan
+^
+ultraSonicInit.c(2): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+ultraSonicInit.c(3): warning: In file included from...
+./ultraSonicInit.h(3): warning: // comments are not allowed in this language [-Wcomment]
+//Blaise Swan
+^
+./ultraSonicInit.h(13): warning: no newline at end of file [-Wnewline-eof]
+int ON_DEMAND_TRIGGER(void);
+                            ^
+ultraSonicInit.c(154): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+ultraSonicInit.c(172): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+    uint16_t ccr1_val = TIM3->CCR1;
+             ~~~~~~~~   ~~~~~~^~~~
+ultraSonicInit.c(173): warning: implicit declaration of function 'UARTprintf' [-Wimplicit-function-declaration]
+        UARTprintf("The CCR1 Val is: %d", ccr1_val);
+        ^
+ultraSonicInit.c(177): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+    distance_cm = (float)ccr1_val / 58.0;
+                ~ ~~~~~~~~~~~~~~~~^~~~~~
+ultraSonicInit.c(177): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+    distance_cm = (float)ccr1_val / 58.0;
+                  ^~~~~~~~~~~~~~~ ~
+ultraSonicInit.c(179): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        UARTprintf("The Distance is: %d", distance_cm);
+        ~~~~~~~~~~                        ^~~~~~~~~~~
+ultraSonicInit.c(174): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+    float distance_cm;
+          ^
+ultraSonicInit.c(184): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void start_trigger() {
+                  ^
+                   void
+ultraSonicInit.c(189): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int ON_DEMAND_TRIGGER(){
+                     ^
+                      void
+ultraSonicInit.c(191): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+14 warnings generated.
+compiling ultraSonicInit.c...
+LCD.c(1): warning: // comments are not allowed in this language [-Wcomment]
+//LCD Module Source File
+^
+LCD.c(3): warning: In file included from...
+./LCD.h(1): warning: // comments are not allowed in this language [-Wcomment]
+//LCD HEADER
+^
+LCD.c(3): warning: In file included from...
+./LCD.h(5): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+LCD.c(3): warning: In file included from...
+./LCD.h(6): warning: In file included from...
+./utility.h(4): warning: // comments are not allowed in this language [-Wcomment]
+//////////////////////////////////
+^
+./utility.h(78): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+LCD.c(3): warning: In file included from...
+./LCD.h(85): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+LCD.c(97): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        LCD_BUS(0x03); //wake up isplay
+        ^~~~~~~~~~~~~
+./LCD.h(68): note: expanded from macro 'LCD_BUS'
+#define LCD_BUS( value )                                FORCE_BITS (LCD_PORT, LCD_BUS_BIT, (value) << LCD_BUS_BIT_POS )
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./utility.h(17): note: expanded from macro 'FORCE_BITS'
+#define FORCE_BITS(port, mask, value)   (port) = (((port) & (~(mask))) | ((value) & (mask))) 
+                                                          ~  ^~~~~~~
+LCD.c(103): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        LCD_BUS(0x03);
+        ^~~~~~~~~~~~~
+./LCD.h(68): note: expanded from macro 'LCD_BUS'
+#define LCD_BUS( value )                                FORCE_BITS (LCD_PORT, LCD_BUS_BIT, (value) << LCD_BUS_BIT_POS )
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./utility.h(17): note: expanded from macro 'FORCE_BITS'
+#define FORCE_BITS(port, mask, value)   (port) = (((port) & (~(mask))) | ((value) & (mask))) 
+                                                          ~  ^~~~~~~
+LCD.c(108): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        LCD_BUS(0x03);
+        ^~~~~~~~~~~~~
+./LCD.h(68): note: expanded from macro 'LCD_BUS'
+#define LCD_BUS( value )                                FORCE_BITS (LCD_PORT, LCD_BUS_BIT, (value) << LCD_BUS_BIT_POS )
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./utility.h(17): note: expanded from macro 'FORCE_BITS'
+#define FORCE_BITS(port, mask, value)   (port) = (((port) & (~(mask))) | ((value) & (mask))) 
+                                                          ~  ^~~~~~~
+LCD.c(113): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        LCD_BUS(0x02);
+        ^~~~~~~~~~~~~
+./LCD.h(68): note: expanded from macro 'LCD_BUS'
+#define LCD_BUS( value )                                FORCE_BITS (LCD_PORT, LCD_BUS_BIT, (value) << LCD_BUS_BIT_POS )
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./utility.h(17): note: expanded from macro 'FORCE_BITS'
+#define FORCE_BITS(port, mask, value)   (port) = (((port) & (~(mask))) | ((value) & (mask))) 
+                                                          ~  ^~~~~~~
+LCD.c(180): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        LCD_BUS( HI_NYBBLE( cmd ) );
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LCD.h(68): note: expanded from macro 'LCD_BUS'
+#define LCD_BUS( value )                                FORCE_BITS (LCD_PORT, LCD_BUS_BIT, (value) << LCD_BUS_BIT_POS )
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./utility.h(17): note: expanded from macro 'FORCE_BITS'
+#define FORCE_BITS(port, mask, value)   (port) = (((port) & (~(mask))) | ((value) & (mask))) 
+                                                          ~  ^~~~~~~
+LCD.c(184): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        LCD_BUS( LO_NYBBLE( cmd ) );
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LCD.h(68): note: expanded from macro 'LCD_BUS'
+#define LCD_BUS( value )                                FORCE_BITS (LCD_PORT, LCD_BUS_BIT, (value) << LCD_BUS_BIT_POS )
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./utility.h(17): note: expanded from macro 'FORCE_BITS'
+#define FORCE_BITS(port, mask, value)   (port) = (((port) & (~(mask))) | ((value) & (mask))) 
+                                                          ~  ^~~~~~~
+LCD.c(195): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        LCD_BUS( HI_NYBBLE( data ) );
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LCD.h(68): note: expanded from macro 'LCD_BUS'
+#define LCD_BUS( value )                                FORCE_BITS (LCD_PORT, LCD_BUS_BIT, (value) << LCD_BUS_BIT_POS )
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./utility.h(17): note: expanded from macro 'FORCE_BITS'
+#define FORCE_BITS(port, mask, value)   (port) = (((port) & (~(mask))) | ((value) & (mask))) 
+                                                          ~  ^~~~~~~
+LCD.c(199): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        LCD_BUS( LO_NYBBLE( data ) );
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./LCD.h(68): note: expanded from macro 'LCD_BUS'
+#define LCD_BUS( value )                                FORCE_BITS (LCD_PORT, LCD_BUS_BIT, (value) << LCD_BUS_BIT_POS )
+                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./utility.h(17): note: expanded from macro 'FORCE_BITS'
+#define FORCE_BITS(port, mask, value)   (port) = (((port) & (~(mask))) | ((value) & (mask))) 
+                                                          ~  ^~~~~~~
+LCD.c(235): warning: implicitly declaring library function 'vsnprintf' with type 'int (char *, unsigned int, const char *, __builtin_va_list)' [-Wimplicit-function-declaration]
+        (void)vsnprintf(buffer, MAX_LCD_BUFSIZ, str, args);
+              ^
+LCD.c(235): note: include the header <stdio.h> or explicitly provide a declaration for 'vsnprintf'
+LCD.c(235): warning: format string is not a string literal [-Wformat-nonliteral]
+        (void)vsnprintf(buffer, MAX_LCD_BUFSIZ, str, args);
+                                                ^~~
+16 warnings generated.
+compiling LCD.c...
+scottMacro.c(7): warning: // comments are not allowed in this language [-Wcomment]
+//////////////////////////////////
+^
+scottMacro.c(11): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+scottMacro.c(81): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+3 warnings generated.
+compiling scottMacro.c...
+DriveMotor.c(1): warning: // comments are not allowed in this language [-Wcomment]
+// Drive Motor Module Source File
+^
+DriveMotor.c(3): warning: In file included from...
+./DriveMotor.h(1): warning: // comments are not allowed in this language [-Wcomment]
+// Drive Motor Module Header File
+^
+DriveMotor.c(3): warning: In file included from...
+./DriveMotor.h(6): warning: In file included from...
+./stm32f303xe.h(152): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */   
+                                  ^~
+DriveMotor.c(4): warning: In file included from...
+./utility.h(4): warning: // comments are not allowed in this language [-Wcomment]
+//////////////////////////////////
+^
+./utility.h(78): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+5 warnings generated.
+compiling DriveMotor.c...
+linking...
+Program Size: Code=9068 RO-data=1224 RW-data=4 ZI-data=1640  
+".\Objects\Demo.axf" - 0 Error(s), 83 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F3xx_DFP.2.2.2.pack
+                Keil.STM32F3xx_DFP.2.2.2
+                STMicroelectronics STM32F3 Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Blais/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Blais/AppData/Local/Arm/Packs/Keil/STM32F3xx_DFP/2.2.2/Drivers/CMSIS/Device/ST/STM32F3xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
